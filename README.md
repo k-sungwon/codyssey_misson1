@@ -415,20 +415,7 @@ c92b3609413c   hello-world   "/hello"      31 seconds ago       Exited (0) 30 se
 
 ## 6. 컨테이너 실행 실습
 
-### 6-1. hello-world
-
-```bash
-$ docker run hello-world
-TODO
-```
-
-### 6-2. ubuntu 컨테이너 진입 및 명령 수행
-
-```bash
-TODO: docker run -it ubuntu 등으로 진입 후 ls, echo 결과
-```
-
-### 6-3. attach vs exec 관찰 정리
+#### attach vs exec 관찰 정리
 
 > TODO: 두 방식의 차이를 직접 관찰한 대로 2~3줄로 정리
 (예: exec는 메인 프로세스 안 건드리고 새 프로세스 추가 실행이라 종료해도 컨테이너 유지,
