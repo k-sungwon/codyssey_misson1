@@ -884,17 +884,23 @@ Docker volume persistent data
 
 ```bash
 $ git config --list
-TODO
-```
+core.repositoryformatversion=0   # 저장소 포맷 버전 (기본값)
+core.filemode=true               # 파일 실행권한 변경 추적
+core.bare=false                  # 일반 작업 저장소 (bare 아님)
+core.logallrefupdates=true       # ref 변경 이력 기록 (reflog)
+core.ignorecase=true             # 대소문자 구분 안 함 (macOS 특징)
+core.precomposeunicode=true      # 한글 파일명 유니코드 정규화 (macOS 필수!)
 
-**VSCode ↔ GitHub 연동 스크린샷**:
+remote.origin.url=https://github.com/k-sungwon/codyssey_misson1.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+→ origin이라는 이름으로 GitHub 저장소와 연결되어 있습니다.
+→ 두 번째 줄은 "원격의 모든 브랜치를 가져온다"는 규칙입니다.
 
-> TODO: 이미지 삽입 (로그인 상태 + 저장소 연동 화면)
-> 
-
-> 민감정보(토큰/비밀번호 등)는 스크린샷에서 마스킹 처리했습니다.
-> 
-
+branch.main.remote=origin              # main은 origin과 연결
+branch.main.merge=refs/heads/main      # origin/main과 병합
+branch.main.vscode-merge-base=origin/main  # VSCode가 추가한 설정
+→ 로컬 main 브랜치가 **원격 origin/main을 추적(track)**하고 있습니다.
+→ 추적하고 있으므로 git pull, git push를 브랜치 이름 없이 사용할 수 있습니다.
 ---
 
 ## 11. 트러블슈팅
